@@ -1,0 +1,178 @@
+:root {
+  background-color: #d7cde1;
+
+  --fg: #22181c;
+  --link-fg: #7a79b7;
+  --link-fg-hover: #00afb5;
+  --font-size: 16px;
+}
+
+@font-face {
+  font-family: "Iosevka";
+  src: url("fonts/iosevka-light.woff2") format("woff2");
+
+  font-stretch: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:visited {
+  transition: all 0.2s linear;
+  text-decoration: none;
+  color: var(--link-fg) !important;
+}
+
+a:hover {
+  color: var(--link-fg-hover) !important;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+li:before {
+  content: "⋄";
+  padding-right: 0.5rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr min(100%, 80ch) 1fr;
+
+  font-family: Iosevka, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size);
+  text-align: left;
+  color: var(--fg);
+}
+
+body > * {
+  grid-column: 2;
+}
+
+.resume-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "name github github"
+    "position email email"
+    "intro intro intro";
+}
+
+.resume-header__name {
+  grid-area: name;
+}
+
+.resume-header__position {
+  grid-area: position;
+}
+
+.resume-header__github {
+  grid-area: github;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.resume-header__email {
+  grid-area: email;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.resume-header__intro {
+  grid-area: intro;
+  margin-top: 1rem;
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "keyskills keyskills keyskills"
+    "frontend backend devops"
+    "history history history"
+    "history3 history2 history1"
+    "git git git"
+    "git3 git2 git1"
+    "books books books"
+    "books3 books2 books1";
+}
+
+.resume__keyskills {
+  grid-area: keyskills;
+  margin-top: 1rem;
+}
+
+.resume__frontend {
+  grid-area: frontend;
+}
+
+.resume__backend {
+  grid-area: backend;
+}
+
+.resume__devops {
+  grid-area: devops;
+}
+
+.resume__history {
+  grid-area: history;
+  margin-top: 1rem;
+}
+
+.resume__history1 {
+  grid-area: history1;
+}
+
+.resume__history2 {
+  grid-area: history2;
+}
+
+.resume__history3 {
+  grid-area: history3;
+}
+
+.resume__git {
+  grid-area: git;
+  margin-top: 1rem;
+}
+
+.resume__git1 {
+  grid-area: git1;
+}
+
+.resume__git2 {
+  grid-area: git2;
+}
+
+.resume__git3 {
+  grid-area: git3;
+}
+
+.resume__books {
+  grid-area: books;
+  margin-top: 1rem;
+}
+
+.resume__books1 {
+  grid-area: books1;
+}
+
+.resume__books2 {
+  grid-area: books2;
+}
+
+.resume__books3 {
+  grid-area: books3;
+}
