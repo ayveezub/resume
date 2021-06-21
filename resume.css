@@ -48,6 +48,8 @@ li:before {
 body {
   display: grid;
   grid-template-columns: 1fr min(100%, 80ch) 1fr;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 
   font-family: Iosevka, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -70,22 +72,35 @@ body > * {
     "intro intro intro";
 }
 
+.resume-header > * {
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .resume-header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .resume-header__name {
   grid-area: name;
 }
 
 .resume-header__position {
   grid-area: position;
+  margin-top: 0rem;
 }
 
 .resume-header__github {
   grid-area: github;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: right;
 }
 
 .resume-header__email {
   grid-area: email;
+  margin-top: 0rem;
   font-size: 1.5rem;
   text-align: right;
 }
@@ -107,6 +122,17 @@ body > * {
     "git3 git2 git1"
     "books books books"
     "books3 books2 books1";
+}
+
+.resume > * {
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .resume {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .resume__keyskills {
