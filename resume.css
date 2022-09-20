@@ -110,6 +110,11 @@ body > * {
   margin-top: 1rem;
 }
 
+.resume-header__intro > ul > li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .resume {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -119,9 +124,7 @@ body > * {
     "history history history"
     "history3 history2 history1"
     "git git git"
-    "git3 git2 git1"
-    "books books books"
-    "books3 books2 books1";
+    "git3 git2 git1";
 }
 
 .resume > * {
@@ -184,21 +187,4 @@ body > * {
 
 .resume__git3 {
   grid-area: git3;
-}
-
-.resume__books {
-  grid-area: books;
-  margin-top: 1rem;
-}
-
-.resume__books1 {
-  grid-area: books1;
-}
-
-.resume__books2 {
-  grid-area: books2;
-}
-
-.resume__books3 {
-  grid-area: books3;
 }
