@@ -122,9 +122,9 @@ body > * {
     "keyskills keyskills keyskills"
     "frontend backend devops"
     "history history history"
-    "history3 history2 history1"
+    "history-last history-second history-first"
     "git git git"
-    "git3 git2 git1";
+    "git-last git-second git-first";
 }
 
 .resume > * {
@@ -138,53 +138,79 @@ body > * {
   }
 }
 
-.resume__keyskills {
+.resume-keyskills {
   grid-area: keyskills;
   margin-top: 1rem;
 }
 
-.resume__frontend {
+.resume-frontend {
   grid-area: frontend;
+  padding-right: 1rem;
 }
 
-.resume__backend {
+.resume-backend {
   grid-area: backend;
+  margin-top: 0;
+  padding-right: 1rem;
 }
 
-.resume__devops {
+.resume-devops {
   grid-area: devops;
+  margin-top: 0;
 }
 
-.resume__history {
+.resume-history {
   grid-area: history;
   margin-top: 1rem;
 }
 
-.resume__history1 {
-  grid-area: history1;
+.resume-history__first {
+  grid-area: history-first;
+  margin-top: 0;
 }
 
-.resume__history2 {
-  grid-area: history2;
+.resume-history__second {
+  grid-area: history-second;
+  margin-top: 0;
+  padding-right: 1rem;
 }
 
-.resume__history3 {
-  grid-area: history3;
+.resume-history__last {
+  grid-area: history-last;
+  padding-right: 1rem;
 }
 
-.resume__git {
+.resume-git {
   grid-area: git;
   margin-top: 1rem;
 }
 
-.resume__git1 {
-  grid-area: git1;
+.resume-git__first {
+  grid-area: git-first;
 }
 
-.resume__git2 {
-  grid-area: git2;
+.resume-git__second {
+  grid-area: git-second;
+  padding-right: 1rem;
 }
 
-.resume__git3 {
-  grid-area: git3;
+.resume-git__last {
+  grid-area: git-last;
+  padding-right: 1rem;
+}
+
+.resume-image {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  height: 150px;
+  width: 200px;
+  object-fit: none;
+  object-position: 0 0;
+}
+
+@media (max-width: 600px) {
+  .resume-image {
+    height: 150px;
+    width: 300px;
+  }
 }
